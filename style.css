@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+.shop-items {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.shop-items article {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 30%;
+}
+
+.shop-items h2 {
+    color: #000080;
+}
+
+.price {
+    color: #EE0000;
+    font-weight: bold;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+/* Add your own styles for the background, fonts, and other details to match the screenshot. */
