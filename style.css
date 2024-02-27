@@ -1,12 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* Assuming a light grey background */
 }
 
 header {
+    background-color: #ffffff; /* White background for the header */
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc; /* Assuming a light grey border */
+}
+
+h1 {
+    color: #003366; /* Assuming a dark blue color for the header */
+    margin: 0;
+}
+
+nav {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 nav ul {
@@ -21,7 +32,12 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #0000EE;
+    color: #003366; /* Matching the color of the header */
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #ff6600; /* Active link color */
 }
 
 .hero-image img {
@@ -30,45 +46,93 @@ nav a {
     display: block;
 }
 
+main {
+    padding: 20px;
+    text-align: center; /* Centering the main content text */
+}
+
+h2 {
+    color: #003366; /* Assuming the same dark blue color for main headings */
+}
+
 .shop-items {
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    flex-wrap: wrap; /* Allowing wrapping for smaller screens */
+    gap: 20px;
+    padding: 0;
 }
 
 .shop-items article {
-    border: 1px solid #000;
-    padding: 10px;
-    width: calc(50% - 40px); /* Adjust the width as necessary, accounting for padding and margins */
-    margin: 10px;
+    background-color: #ffffff; /* White background for articles */
+    border: 1px solid #cccccc; /* Light grey border */
+    padding: 15px;
+    width: 45%; /* Adjust as needed for layout */
+    margin-bottom: 20px;
 }
 
 .shop-items img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
-.shop-items h2 {
-    color: #000080;
+.shop-items h3 {
+    color: #003366; /* Dark blue color for article headings */
+    margin-bottom: 0.5em;
+}
+
+.shop-items p {
+    line-height: 1.6;
+    color: #333; /* Dark gray text for the description */
 }
 
 .price {
-    color: #EE0000;
+    color: #ff6600; /* Orange color for the price, similar to the active link */
     font-weight: bold;
+    margin: 1em 0;
 }
 
 button {
-    background-color: #008CBA;
+    background-color: #ff6600; /* Orange background for buttons */
     color: white;
-    padding: 10px 20px;
     border: none;
-    cursor: pointer;
+    padding: 10px 20px;
     text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e65c00; /* Darker orange for hover state */
 }
 
 footer {
+    background-color: #003366; /* Dark blue background for footer */
+    color: white;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .shop-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-items article {
+        width: 90%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
